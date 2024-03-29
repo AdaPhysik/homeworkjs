@@ -1,0 +1,230 @@
+// 1 Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.
+
+//Function Expression (FE)
+// let getSquare = function(a){
+    
+//     return a*a;
+// };
+// console.log (getSquare(5));
+
+// Function Declaration (FD)
+
+// function square (a) {
+//     let result = a*a;
+//     return result;
+// };
+// console.log(square(7654));
+
+// Стрелочная функция (СФ)
+
+// let getSquare = (a) => a*a;
+// console.log(getSquare(6));
+
+
+// 2 Сделайте функцию, которая возвращает сумму двух чисел.
+
+
+// (FE)
+
+// let sum = function(a,c) {
+//     return a + c;
+//  };
+//  console.log (sum(5,8));
+
+// (FD)
+
+// function sum (a,c) {
+//     return a + c;
+// };
+// console.log(sum(7654,9));
+
+//  (СФ)
+
+// let sum = (a,c) => a+c;
+// console.log(sum(8,9));
+
+
+// 3 Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
+
+// (FE)
+
+// let sum = function(a,b,c) {
+//     return (a - b)/c;
+// };
+// console.log (sum(13,8,3));
+
+// (FD)
+
+// function sum (a,b,c) {
+//     return (a - c)/3;
+//     sum(2)
+// };
+// console.log(sum(7654,9,5));
+
+//  (СФ)
+
+// let sum = (a,b,c) => (a-b)/c;
+// console.log(sum(8,9,5));
+
+// 4 Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+
+// (FE)
+
+// let getDay = function (day) {
+//     switch (day) {
+//         case 1: return "Понедельничек";
+//         case 2: return "Вторничек";
+//         case 3: return "Средничек";
+//         case 4: return "Четвергочек";
+//         case 5: return "Пятничка";
+//         case 6: return "Субботушка";
+//         case 7: return "Воскресенье";
+//         default: return "Ку-ку,кто-то заработался";
+//     }
+// }
+// console.log(getDay(5))
+
+// (FD)
+
+// function getDay (day){
+// switch (day) {
+//     case 1: return "Понедельничек";
+//     case 2: return "Вторничек";
+//     case 3: return "Средничек";
+//     case 4: return "Четвергочек";
+//     case 5: return "Пятничка";
+//     case 6: return "Субботушка";
+//     case 7: return "Воскресенье";
+//     default: return "Ку-ку,кто-то заработался";
+//     }
+// }
+// console.log(getDay(10))
+
+
+// СФ
+
+// getDay = (day) => {
+//     switch (day) {
+//         case 1: return "Понедельничек";
+//         case 2: return "Вторничек";
+//         case 3: return "Средничек";
+//         case 4: return "Четвергочек";
+//         case 5: return "Пятничка";
+//         case 6: return "Субботушка";
+//         case 7: return "Воскресенье";
+//         default: return "Ку-ку,кто-то заработался";
+//         }
+//     }
+//     console.log(getDay(1));
+    
+
+// 5 Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false
+
+// FE
+
+// let getNum = function(a,b) {
+//     return a === b;
+// };
+// console.log (getNum(8,8));
+
+
+// FD
+
+
+// function getNum (a,b) {
+//     return a ===b;
+
+// }
+// console.log(getNum(3,4));
+
+// CФ
+
+// let getNum = (a,b) => a === b;
+// console.log(getNum(4,5))
+
+// Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть вернет true, а если нет то - false.
+
+// Fe
+
+// let sum = function(a,b) {
+//     return a + b > 10;
+// };
+// console.log(sum(Infinity,0));
+
+// FD
+
+// function sum (a,b){
+//     return a + b > 10;
+// };
+// console.log(sum(undefined,4));
+
+// СФ
+
+// let sum =(a,b) => a + b >10;
+// console.log (sum (0,7));
+
+//  7 Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а если нет - false.
+
+//FE
+
+// let numNegativ = function(a) {
+//     if (a < 0) {
+//         return true;
+//     } else 
+//     return false
+// }
+// console.log (numNegativ(7))
+
+//можно проще,мне кажется
+
+// let numNegativ = function(a) {
+//     return a < 0;
+// }
+// console.log(numNegativ(-56));
+
+// FD
+
+// function numNegativ  (a) {
+//     return a < 0 ;
+// }
+// console.log(numNegativ(-56));
+
+
+//СФ 
+
+// let numNegativ = (a) => a < 0;
+// console.log(numNegativ(-56));
+
+// 8 Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
+
+// let isNumberlnRange = function (a) {
+//     return a > 0 && a < 10;
+// }
+// console.log(isNumberlnRange(5));
+
+
+// function isNumberlnRange (a) {
+//     return a > 0 && a < 10;
+// }
+// console.log(isNumberlnRange(15));
+
+
+// let isNumberlnRange =  (a) => a > 0 && a < 10;
+// console.log(isNumberlnRange(15));
+
+// 9 Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
+
+// let isEven = function (a) {
+//     return (a % 2 );
+// }
+// console.log(isEven(5));
+
+// let isEven = function(a) {
+//     return (a % 2);
+// }
+// console.log( isEven(4));
+
+// он выводит  0 1 вместо true false, можно иначе
+
+let isEven =  (a) => (a % 2);
+console.log(isEven(10));

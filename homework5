@@ -1,0 +1,199 @@
+
+//1 Преобразовать строку в массив слов
+
+// let str = 'Каждому человеку на свете стоит побывать в путешествии';
+// function stringToarray(str) {
+
+//     return str.trim().split(" ");
+
+// }
+// let array = stringToarray(str);
+// console.log (array);
+
+//2  Напишите функцию deleteСharacters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
+//можно было бы зациклить,как делали на паре 
+// let str = 'Сегодня чудесная погода';
+// function deleteСharacters(str, length) {
+//     if ((str.constructor === String) && (length>0)) {
+//         return str.slice(0, length);
+//     }
+// };
+// console.log (deleteСharacters(str,5));
+
+//3 
+// Напишите функцию insertDash(str), которая принимает строку str в качест
+
+// let str ='Хомяк съел всe зернышки';
+// function insertDash(str) {
+//     return str.replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-");
+// };
+// console.log(insertDash(str));
+
+//4
+
+// let str ='Хомяк съел всe зернышки';
+// function insertDash(str) {
+//     return str.toUpperCase();
+// };
+// console.log(insertDash(str));
+
+// 5 
+
+// let str = 'Хомяк схомячил все зернышки';
+// function capitalize(str) {
+//     return str.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+
+// };
+// console.log (capitalize(str));
+
+//6
+
+// function  changeRegister(str) {
+// let strLenght = str.lenght;
+// let change_str ='хОмячоК';
+//     for (let i =0; i < strLenght; i++){
+//         if (str[i] === str [i].toLowerCase()) {
+//             change_str += str[i].toUpperCase();
+//         } else {
+//             change_str += str[i].toLowerCase();
+//         }
+//     }
+//     return change_str;
+// }
+// console.log(changeRegister(str));
+
+//7 Напишите функцию removeChar(str), которая возвращает строку, очищенную от всех не буквенно-цифровых симв
+
+// let removeChar = (str) => str.replace(/[^a-zA-Zа-яА-Я0-9]/g, "");
+// console.log(removeChar('хомяк съел :"/ зерно &* !'));
+
+//8 Напишите функцию zeros(num, len), которая дополняет нулями до указанной длины числовое значение с дополнительным знаком «+» или «-» в зависимости от передаваемого аргумента.
+
+
+// let zeros = (num, len, sign) => sign + ('' + num).padStart(len, '0')
+// console.log(zeros('qwerty', 33, '-'))
+
+//9 Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
+
+
+// let comparison = (str1, str2) => str1.toUpperCase () === str2.toUpperCase(); 
+// console.log(comparison('fghERTUghj','wert'))
+
+//10 Напишите функцию insensitiveSearch(str1, str2), которая осуществляет поиск подстроки str2 в строке str1 без учёта регистра символов.
+
+
+
+// function insensitiveSearch(str1, str2) {
+//     let results = str1.toLowerCase().includes(str2.toLowerCase());
+//     console.log(results)
+// }
+// insensitiveSearch('qwer', 'lkjhcvbnm')
+
+//11 Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в camelCase, при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки пишется с заглавной буквы.
+
+
+// str = "привет ДжАВа";
+// function initCap(str) {
+//    return str.toLowerCase().replace(/(?:^|\s)[а-я]/g, function(m) {
+//       return m.toUpperCase().replace(/\s+/g, "");
+//    });
+// };
+// console.log(initCap(str))
+
+//12 Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из camelCase в snake_case, при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
+
+// function initSnake(str) {
+  
+//     var str = str.replace(/[А-Я]/g, function (letter) {
+//       return '_' + letter.toLowerCase();
+//     });
+//     return str.replace(/^_/, "");
+// };
+// console.log(initSnake('ПриветДжава'));
+
+//13  Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
+
+// function repeatStr(str, n = 6) {
+//     return str.repeat(n);
+// };
+// console.log(('' + '' + '' + '') === '');
+
+//14  Напишите функцию path(pathname), которая возвращает имя файла (подстрока после последнего символа "/" ) из полного пути к файлу.
+
+// let pathname = "/home/user/dir/file.txt";
+
+// function path(pathname) {
+//   let name = pathname.split("/").pop();
+//   return name;
+// };
+// console.log (path(pathname))
+
+//15 Создайте функцию endsWith(), который сравнивает подстроку str1 с окончанием исходной строки str и определяет заканчивается ли строка символами подстроки.
+
+
+// function endsWith(str, str1) {
+//     return str.indexOf(str1, str.length - str1.length) !== -1;
+// };
+// console.log (endsWith('kjhgfd', 'tre'));
+
+//16 Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos
+
+// let getSubstr = (str, char, pos) => {
+//     let index = str.indexOf(char)
+//     return pos === 'До' ? str.slice(0, index) : str.slice(index + 1)
+//   };
+//   console.log  (getSubstr ('str', 'char', 'pos'));
+
+//17
+
+// let insert = (str, inser='', pos = 0) =>
+// str.slice(0,pos) + inser + str.slice(pos);
+// console.log(insert('qwefvc', 'kujjh '));
+
+//18
+// function  limitStr(str, num) {
+//     if (str.length > num) {
+//       return str.slice(0, num) + "...";
+//     } else {
+//       return str;
+//     }
+//   };
+//   console.log( limitStr('qwert', 8))
+
+//ЛИБО
+
+// let limitStr = (str, n = 0, symb = '') =>
+// str.slice(0, n) + (symb ? symb : '...')
+
+// console.log(limitStr('whgfdftghf', 14))
+
+//19  Напишите функцию count(str, stringsearch), которая возвращает количество символов stringsearch в строке str.
+
+
+
+// function count(str, stringsearch) {
+//     let result = str.match(new RegExp(`${stringsearch}`, "g") || []).length
+//     return result;
+// };
+// console.log(count('С миру по нитке', "!"));
+
+//20  Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.
+
+// let strip = (str) => 
+// str = str.replace(/ +/g, ' ').trim();
+// console.log (strip ('Milena    ела кашу'));
+
+//21 Напишите функцию cutString(str, n), которая удаляет лишние слова из строки str, оставив в ней n слов.
+
+
+// let str = "На улице сильный мороз и холодный ветер";
+
+// function cutString(str, n) {
+//     return str.split(" ").splice(0, n).join(" ");
+// };
+// console.log ( cutString('Milena    ела кашу',5))
+
+
+//22
+let  worldFined = (word, str) => (str.includes('word') ? true : false)
+console.log(worldFined ('word', 'so beutiful word'))

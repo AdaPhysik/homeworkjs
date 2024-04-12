@@ -1,0 +1,143 @@
+
+// //1  Используя метод map() напишите код, который получает из массива строк новый массив, содержащий их длины.
+
+// let fruits = ["Яблоко", "Апельсин", "Ȅлива"];
+// let fruitsLenghts = fruits.map(function(fruits) {
+//     return fruits.length;
+// });
+
+// console.log(fruitsLenghts);
+
+// //2 Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19]. Используя метод reduce() напишите функцию currentSums(numbers), которая возвращает новый массив из такого же числа элементов, в котором на каждой позиции будет находиться сумма элементов массива numbers до этой позиции включительно.
+// // надо будет еще подумать над этим
+
+// let  numbers = [2, 3, 5, 7, 11, 13, 17, 19];
+// function currentSum(numbers) {
+// let result = [];
+// numbers.reduce(function(sum, current, i) {
+//     return result[i] = sum + current;}, 0);
+// console.log( result );
+// };
+// currentSum(numbers); 
+
+
+
+// //3 Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
+
+// let arr = [1,3,5,8,9,45,67,8];
+
+// function sum (arr) {
+// let result = [];
+// }
+
+
+
+
+// //4
+
+// let string =  'Будьте любезны, подайте тот десерт';
+// if (string ) {
+//     let result = string.split(' ').reduce((accumulator, currentValue) => {
+//         let first = currentValue[0] || ''
+//         accumulator = accumulator + first
+//         return accumulator
+//       }, '')
+//       console.log(result)
+//     }
+
+// // Забавное наблюдение,если я перед "подайте" не ставлю пробел , 
+// //то  accumulator "не чувствует " слова и не пропечатывает первую букву "п"
+// //  нежели ситуация с пробелом.
+
+// //5   Напишите код, создающий массив, который будет состоять из строк, состоящих из предыдущего, текущего и следующего символа строки str.
+//задача на копирование строк?
+// let books = "Три мушкетера"; 
+// function getChars(value, index, str) {
+//    return str.substring(index - 1, index + 2);
+// };
+// let arr = Array.prototype.map.call(books, getChars);
+// console.log(arr); 
+
+
+
+// //пока не придумала,надо подумать маленечко
+
+// //6 Напишите код, преобразующий массив цифр, которые располагаются неупорядоченно, в массив цифр расположенных по убыванию их значений.
+// //задача сортировки?
+// let num = [34,67,86,35,65,55,665,555,56,6,1];
+// function math(first,second) {
+// if (first === second)
+//     return 0;
+// if (first > second )
+//     return -1;
+// else 
+//     return 1;
+// }
+// num = num.sort(math);
+// console.log (num);
+
+
+//7  Напишите код, объединяющий три массива цифр, и располагающий цифры, в полученном массиве, в порядке убывания их значений через пробел.
+// //concat -подглядела
+// let num1 = [23,65,75,3,55,22];
+// let num2 = [65,35,79,76,43,65];
+// let num3 = [76,7,87,55,23,567];
+// function getArray(num1,num2,num3) {
+//     let num4 = num1.concat(num2,num3);  
+
+     //дальше логично использовать pop 
+
+//     let num5 = num.pop();
+//     while (num5 != undefined) {
+//         console.log(num4 + '');
+//         num4 = num5.pop();
+
+//     }
+
+//     getArray(num1,num2,num3);
+   
+// }
+
+//8 Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+
+// let arr =  [[1, 2, 3], [4, 5], [6]];
+//   let sum = 0;
+  
+//   arr = arr.flat(Infinity)
+  
+//   for (let i = 0; i < arr.length; i++) {
+//        sum += arr[i];
+//   }
+  
+//   console.log(sum);
+
+//9  Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+
+// let array = [10, 20, 30, 50, 235, 3000];
+// for (let i = array.length -1; i >= 0; i--) {
+// console.log(array[i]);
+// };
+
+//10 Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+// function Sum(arr) {
+//     let result = [];
+//     arr.reduce((sum, current) => {
+//         if (sum <= 10) {
+//             result.push(current);
+//             return sum += current;
+//         }
+//     }, 0);
+//     return result.length;
+// };
+// console.log(Sum([3,4,57,42,456,653,22,64]));
+
+
+//оставлю.с ней намучалась
+
+//11
+
+// let arrayFill = (value, len) => {
+// let array = Array(len);
+// return array.fill(value);
+// };
+// console.log(arrayFill('x', 5));

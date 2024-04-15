@@ -1,0 +1,104 @@
+//1
+
+// function f() {
+//  console.log(this);
+// }
+
+// let user = {
+//  g: f.bind(null),
+// };
+// user.g();
+
+//вывелся объект global.все методы содержатся на глобальном объекте
+// с помощью bind  фиксим this-->user.g() исходная функция вызывется с this=null(потому что мы привязали ее ранее)
+
+
+//2
+
+// function f() {
+//     console.log(this.name);
+//    }
+   
+//    f = f.bind({ name: "Вася" }).bind({ name: "Петя" });
+   
+//    f();
+//В целом,да.но старый бинд останется прежним
+
+//3
+
+// function sayHi() {
+//     console.log( this.name );
+//    }
+//    sayHi.test = 5;
+   
+//    let bound = sayHi.bind({
+//     name: "Вася"
+//    });
+   
+// console.log( bound.test );
+
+//undefined. у bind другой объект
+
+//4
+//нет привязки(связки) с контекстом по всей видимости.можно биндом связать
+//ниже забиндила
+
+
+// function askPassword(ok, fail) {
+//     let password = console.log("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+//   }
+  
+//   let user = {
+//     name: 'Вася',
+  
+//     loginOk() {
+//       console.log(`${this.name} logged in`);
+//     },
+  
+//     loginFail() {
+//       console.log(`${this.name} failed to log in`);
+//     },
+  
+//   };
+  
+//   askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+
+
+//5
+// user.login.bind(user,true), user.login.bind(user,false
+//и не забыть забиндить
+
+
+// function askPassword(ok, fail) {
+//     let password = console.log("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+//    }
+   
+//    let user = {
+//     name: 'John',
+   
+//     login(result) {
+//         console.log( this.name + (result ? ' logged in' : ' failed to log in') );
+//     }
+//    };
+   
+// askPassword( user.login.bind(user,true), user.login.bind(user,false));
+
+
+//6
+
+// let elem = {value: 'Привет'}
+
+// function func(surname, name) {
+//     console.log(this.value + ', ' + surname + ' ' + name);
+// }
+
+
+// //Тут напишите конструкцию с bind()
+// let funcUser = func.bind(elem)
+// funcUser('Иванов', 'Иван'); //тут должно вывести 'привет, Иванов Иван'
+// funcUser('Петров', 'Петр'); //тут должно вывести 'привет, Петров Петр'
